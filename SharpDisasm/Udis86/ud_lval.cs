@@ -41,7 +41,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 
 
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     #pragma warning disable 1591
     [StructLayout(LayoutKind.Explicit)]

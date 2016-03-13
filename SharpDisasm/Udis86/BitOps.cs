@@ -36,7 +36,7 @@
 
 using System;
 
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     internal static class BitOps
     {

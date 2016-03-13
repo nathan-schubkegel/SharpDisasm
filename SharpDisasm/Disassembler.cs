@@ -39,9 +39,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SharpDisasm.Helpers;
+using CrazyNateSharpDisasm.Helpers;
 
-namespace SharpDisasm
+namespace CrazyNateSharpDisasm
 {
     /// <summary>
     /// Provides a simple wrapper around the C# ported udis86 library.
@@ -83,7 +83,7 @@ namespace SharpDisasm
         /// <summary>
         /// The translator that will be used when calling <see cref="Instruction.ToString"/>.
         /// </summary>
-        public static SharpDisasm.Translators.Translator Translator = new SharpDisasm.Translators.IntelTranslator();
+        public static CrazyNateSharpDisasm.Translators.Translator Translator = new CrazyNateSharpDisasm.Translators.IntelTranslator();
 
         /// <summary>
         /// The number of bytes successfully decoded into instructions. This excludes invalid instructions.

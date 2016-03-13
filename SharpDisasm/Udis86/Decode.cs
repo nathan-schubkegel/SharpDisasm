@@ -41,7 +41,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     internal class Decode
     {

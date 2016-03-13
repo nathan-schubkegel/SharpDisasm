@@ -40,7 +40,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace SharpDisasm
+namespace CrazyNateSharpDisasm
 {
     /// <summary>
     /// The CPU architecture mode

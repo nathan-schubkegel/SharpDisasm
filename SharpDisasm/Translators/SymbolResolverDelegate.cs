@@ -39,7 +39,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharpDisasm.Translators
+namespace CrazyNateSharpDisasm.Translators
 {
     /// <summary>
     /// Allows an address to be resolved to a symbol name

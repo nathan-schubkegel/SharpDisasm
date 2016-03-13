@@ -34,13 +34,13 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // --------------------------------------------------------------------------------
 
-using SharpDisasm.Udis86;
+using CrazyNateSharpDisasm.Udis86;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SharpDisasm.Translators
+namespace CrazyNateSharpDisasm.Translators
 {
     /// <summary>
     /// Translates instructions to Intel ASM syntax

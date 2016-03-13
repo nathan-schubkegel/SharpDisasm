@@ -39,10 +39,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SharpDisasm.Helpers;
+using CrazyNateSharpDisasm.Helpers;
 
 #pragma warning disable 1591
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     public delegate void UdTranslatorDelegate(ref ud ud);
     public delegate string UdSymbolResolverDelegate(ref ud ud, long addr, ref long offset);

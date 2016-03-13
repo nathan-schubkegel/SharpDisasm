@@ -40,7 +40,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace SharpDisasm.Helpers
+namespace CrazyNateSharpDisasm.Helpers
 {
     /// <summary>
     /// 

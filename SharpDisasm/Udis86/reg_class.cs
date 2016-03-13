@@ -40,7 +40,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     /// <summary>
     /// Register classes

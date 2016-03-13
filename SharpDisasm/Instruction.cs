@@ -40,9 +40,9 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
-using SharpDisasm.Helpers;
+using CrazyNateSharpDisasm.Helpers;
 
-namespace SharpDisasm
+namespace CrazyNateSharpDisasm
 {
     /// <summary>
     /// Represents a decoded instruction.
@@ -67,7 +67,7 @@ namespace SharpDisasm
         /// <summary>
         /// Mnemonic
         /// </summary>
-        public SharpDisasm.Udis86.ud_mnemonic_code Mnemonic { get; private set; }
+        public CrazyNateSharpDisasm.Udis86.ud_mnemonic_code Mnemonic { get; private set; }
         
         /// <summary>
         /// The instruction operands (maximum 3)
@@ -168,7 +168,7 @@ namespace SharpDisasm
         /// <summary>
         /// The instruction table entry that applies to this instruction
         /// </summary>
-        public SharpDisasm.Udis86.ud_itab_entry itab_entry;
+        public CrazyNateSharpDisasm.Udis86.ud_itab_entry itab_entry;
 
         internal Instruction(ref Udis86.ud u, bool keepBinary)
         {

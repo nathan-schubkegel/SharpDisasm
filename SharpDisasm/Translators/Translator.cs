@@ -40,7 +40,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace SharpDisasm.Translators
+namespace CrazyNateSharpDisasm.Translators
 {
     /// <summary>
     /// All translators must inherit from the abstract class <see cref="Translator"/>. This base class provides a number of common methods, and defines two abstract methods that must be implemented.
@@ -92,10 +92,10 @@ namespace SharpDisasm.Translators
         /// </summary>
         /// <param name="type">The register <see cref="SharpDisasm.Udis86.ud_type"/> to retrieve the corresponding string for. Note: only the UD_R_* types will result in a valid index.</param>
         /// <returns>The corresponding string value for the register.</returns>
-        protected string RegisterForType(SharpDisasm.Udis86.ud_type type)
+        protected string RegisterForType(CrazyNateSharpDisasm.Udis86.ud_type type)
         {
             // Adjust to be zero based (i.e. the first register in ud_type starts at 1 == UD_R_AL)
-            int indx = (type - SharpDisasm.Udis86.ud_type.UD_R_AL);
+            int indx = (type - CrazyNateSharpDisasm.Udis86.ud_type.UD_R_AL);
             return Registers[indx];
         }
 
@@ -189,7 +189,7 @@ namespace SharpDisasm.Translators
         protected void ud_syn_print_imm(Instruction insn, Operand op)
         {
             ulong v;
-            if (op.Opcode == SharpDisasm.Udis86.ud_operand_code.OP_sI && op.Size != insn.opr_mode)
+            if (op.Opcode == CrazyNateSharpDisasm.Udis86.ud_operand_code.OP_sI && op.Size != insn.opr_mode)
             {
                 if (op.Size == 8)
                 {
@@ -230,7 +230,7 @@ namespace SharpDisasm.Translators
         protected void ud_syn_print_mem_disp(Instruction insn, Operand op, int sign)
         {
             Debug.Assert(op.Offset != 0);
-            if (op.Base == SharpDisasm.Udis86.ud_type.UD_NONE && op.Index == SharpDisasm.Udis86.ud_type.UD_NONE)
+            if (op.Base == CrazyNateSharpDisasm.Udis86.ud_type.UD_NONE && op.Index == CrazyNateSharpDisasm.Udis86.ud_type.UD_NONE)
             {
                 ulong v;
                 Debug.Assert(op.Scale == 0 && op.Offset != 8);

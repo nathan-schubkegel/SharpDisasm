@@ -41,7 +41,7 @@ using System.Linq;
 using System.Text;
 
 #pragma warning disable 1591
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     internal static class InstructionTables
     {

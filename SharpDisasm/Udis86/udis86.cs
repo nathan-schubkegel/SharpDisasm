@@ -39,9 +39,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SharpDisasm.Helpers;
+using CrazyNateSharpDisasm.Helpers;
 
-namespace SharpDisasm.Udis86
+namespace CrazyNateSharpDisasm.Udis86
 {
     /// <summary>
     /// <para>The C# udis86 library ported from C.</para>

@@ -34,7 +34,7 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // --------------------------------------------------------------------------------
 
-using SharpDisasm.Udis86;
+using CrazyNateSharpDisasm.Udis86;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,7 +42,7 @@ using System.Linq;
 using System.Text;
 
 
-namespace SharpDisasm
+namespace CrazyNateSharpDisasm
 {
     /// <summary>
     /// Represents an operand for an <see cref="Instruction"/>
