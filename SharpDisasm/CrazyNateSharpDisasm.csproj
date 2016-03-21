@@ -32,10 +32,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArchitectureMode.cs" />
+    <Compile Include="DependencyFetcher.cs" />
     <Compile Include="Helpers\AssemblyCodeOffset.cs" />
     <Compile Include="Helpers\AssemblyCodeMemory.cs" />
     <Compile Include="Helpers\AssemblyCodeArray.cs" />
     <Compile Include="Helpers\AssemblyCode.cs" />
+    <Compile Include="ManagedEntryPoint.cs" />
     <Compile Include="Translators\ATTTranslator.cs" />
     <Compile Include="Translators\IntelTranslator.cs" />
     <Compile Include="Translators\SymbolResolverDelegate.cs" />
