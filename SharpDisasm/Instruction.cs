@@ -238,8 +238,14 @@ namespace CrazyNateSharpDisasm
         /// <returns>The translated instruction (e.g. Intel ASM syntax)</returns>
         public override string ToString()
         {
-            System.Diagnostics.Debug.Assert(Disassembler.Translator != null, "Disassembler.Translator must be configured to use Instruction.ToString");
-            return Disassembler.Translator.Translate(this);
+          return TranslatorForToString.Translate(this);
         }
+
+        private static CrazyNateSharpDisasm.Translators.Translator TranslatorForToString = 
+          new CrazyNateSharpDisasm.Translators.IntelTranslator
+          {
+            IncludeAddress = true,
+            IncludeBinary = true,
+          };
     }
 }

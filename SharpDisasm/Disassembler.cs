@@ -83,7 +83,12 @@ namespace CrazyNateSharpDisasm
         /// <summary>
         /// The translator that will be used when calling <see cref="Instruction.ToString"/>.
         /// </summary>
-        public static CrazyNateSharpDisasm.Translators.Translator Translator = new CrazyNateSharpDisasm.Translators.IntelTranslator();
+        public CrazyNateSharpDisasm.Translators.Translator Translator =
+          new CrazyNateSharpDisasm.Translators.IntelTranslator
+          {
+            IncludeAddress = true,
+            IncludeBinary = true,
+          };
 
         /// <summary>
         /// The number of bytes successfully decoded into instructions. This excludes invalid instructions.

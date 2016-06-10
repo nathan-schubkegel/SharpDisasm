@@ -70,6 +70,7 @@ namespace CrazyNateSharpDisasm.Translators
                     WriteBinary(insn);
                 
                 ud_translate_intel(insn);
+                TrimContent();
             }
             var result = Content.ToString();
             Content.Length = 0;
@@ -89,11 +90,63 @@ namespace CrazyNateSharpDisasm.Translators
             if (IncludeBinary)
                 WriteBinary(insn);
             ud_translate_intel(insn);
+            TrimContent();
             var result = Content.ToString();
             Content.Length = 0;
             return result;
         }
 
+        /// <summary>
+        /// Gets a printable version of an instruction's address.
+        /// </summary>
+        public string TranslateAddress(Instruction insn)
+        {
+          Content.Length = 0;
+          WriteAddress(insn);
+          TrimContent();
+          var result = Content.ToString();
+          Content.Length = 0;
+          return result;
+        }
+
+        /// <summary>
+        /// Gets a printable version of an instruction's bytes.
+        /// </summary>
+        public string TranslateBytes(Instruction insn)
+        {
+          Content.Length = 0;
+          WriteBinary(insn);
+          TrimContent();
+          var result = Content.ToString();
+          Content.Length = 0;
+          return result;
+        }
+
+        /// <summary>
+        /// Gets a printable version of an instruction's mnemonic opcode.
+        /// </summary>
+        public string TranslateMnemonic(Instruction insn)
+        {
+          Content.Length = 0;
+          ud_translate_intel(insn);
+          TrimContent();
+          var result = Content.ToString();
+          Content.Length = 0;
+          return result;
+        }
+
+        /// <summary>
+        /// Removes spaces from the end of 'Content' stringbuilder.
+        /// </summary>
+        private void TrimContent()
+        {
+          // the Translate() methods tend to add a trailing space,
+          // so remove it
+          while (Content.Length > 0 && Content[Content.Length - 1] == ' ')
+          {
+            Content.Length -= 1;
+          }
+        }
 
         /* -----------------------------------------------------------------------------
          * opr_cast() - Prints an operand cast.
